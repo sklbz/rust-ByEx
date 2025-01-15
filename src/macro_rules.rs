@@ -124,4 +124,11 @@ macro_rules! calculate {
             println!("{} = {}", stringify!{$e}, val);
         }
     };
+
+    // variadic
+    // Decompose multiple `eval`s recursively
+    (eval $e:expr, $(eval $es:expr),+) => {{
+        calculate! { eval $e }
+        calculate! { $(eval $es),+ }
+    }};
 }
