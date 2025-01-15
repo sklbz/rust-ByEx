@@ -43,3 +43,14 @@ macro_rules! test {
                  $left || $right)
     };
 }
+
+// `find_min!` will calculate the minimum of any number of arguments, if it is greater or equal than 2.
+macro_rules! find_min {
+    // Base case:
+    ($x:expr) => ($x);
+    // `$x` followed by at least one `$y,`
+    ($x:expr, $($y:expr),+) => (
+        // Call `find_min!` on the tail `$y`
+        std::cmp::min($x, find_min!($($y),+))
+    )
+}
