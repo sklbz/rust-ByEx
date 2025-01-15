@@ -2,6 +2,7 @@ mod custom_types;
 #[macro_use]
 mod macro_rules;
 mod closures;
+mod unsafe;
 
 fn main() {
     say_hello!();
