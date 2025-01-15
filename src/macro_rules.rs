@@ -114,3 +114,14 @@ mod test {
     test!(mul_assign, 2u32, 3u32, 6u32);
     test!(sub_assign, 3u32, 2u32, 1u32);
 }
+
+
+macro_rules! calculate {
+    // hehehe `eval` is _not_ a Rust keyword! (DSL)
+    (eval $e:expr) => {
+        {
+            let val: usize = $e; // Force types to be unsigned integers
+            println!("{} = {}", stringify!{$e}, val);
+        }
+    };
+}
