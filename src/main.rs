@@ -4,6 +4,18 @@ mod macro_rules;
 
 fn main() {
     say_hello!();
+    create_function!(foo);
+    create_function!(bar);
+
+    foo();
+    bar();
+
+    print_result!(1u32 + 1);
+    print_result!({
+        let x = 1u32;
+
+        x * x + 2 * x - 1
+    });
 }
 
 /* just for testing
