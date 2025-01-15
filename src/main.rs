@@ -1,6 +1,7 @@
 mod custom_types;
 #[macro_use]
 mod macro_rules;
+mod closures;
 
 fn main() {
     say_hello!();
