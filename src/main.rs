@@ -2,7 +2,7 @@ mod custom_types;
 #[macro_use]
 mod macro_rules;
 mod closures;
-mod unsafe;
+mod r#unsafe;
 
 fn main() {
     say_hello!();
@@ -19,5 +19,3 @@ fn main() {
         x * x + 2 * x - 1
     });
 }
-
-
