@@ -18,4 +18,6 @@ fn main() {
 
         x * x + 2 * x - 1
     });
+
+    print!("{:?}", calculate!(eval 1 + 2));
 }
