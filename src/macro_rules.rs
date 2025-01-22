@@ -117,7 +117,6 @@ mod test {
 
 
 macro_rules! calculate {
-    // hehehe `eval` is _not_ a Rust keyword! (DSL)
     (eval $e:expr) => {
         {
             let val: usize = $e; // Force types to be unsigned integers
