@@ -8,6 +8,8 @@ fn main() {
     say_hello!();
     create_function!(foo);
     create_function!(bar);
+    create_function!(fizz);
+    create_function!(baz);
 
     foo();
     bar();
@@ -20,4 +22,5 @@ fn main() {
     });
 
     print!("{:?}", calculate!(eval 1 + 2));
+    print!("{:?}", calculate!(eval 3 * 3));
 }
